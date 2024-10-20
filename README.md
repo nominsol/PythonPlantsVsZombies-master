@@ -1,29 +1,59 @@
-# PythonPlantsVsZombies
-  A simple PlantsVsZombies game. <br>
-  `It's only for personal learning and noncommercial use. If this game infringes the copyright, please let me know.`
-* implement plants: sunflower, peashooter, wallnut, snowpeashooter, cherrybomb, threepeashooter, chomper, puffshroom, potatomine, spikeweed, scaredyshroom, squash, scaredyshroom, jalapeno, sunShroom, iceShroom, hypnoShroom.
-* implement zombies: zombie, flagzombie, coneheadzombie, bucketheadzombie, newspaperzombie.
-* use json file to store level data (e.g.position and time of zombies, background info)
-* support to select plant cards at the beginning of the level
-* support day level, night level, moving card select level and wallnut bowling level
+# Python 기반 PlantsVsZombies 게임 기능 추가 프로젝트
 
-# Requirement
-* Python 3.7 
-* Notice: python version 3.7 is advisable, but not required. For LINUX: if your Linux system has a preinstalled python 3+, it's ok to run this game. Updating to python 3.7 directly may break LINUX Mint.
-* Python-Pygame 1.9
+## 프로젝트 개요
 
-# How To Start Game
-$ python main.py
+본 프로젝트는 Python 기반 오픈소스 게임인 **PlantsVsZombies**를 분석하고, 기능을 추가 및 개선한 프로젝트입니다. 오픈소스 개발자의 게임을 새롭게 수정하여 보다 완성도 높은 게임으로 구현하는 것이 목표입니다. 이를 통해 팀원들이 Python 언어와 오픈소스 개발에 대한 역량을 강화하고, 협업을 통한 실무 경험을 쌓을 수 있었습니다.
 
-# How to Play
-* use mouse to collect sun, select the plant cards and seed the plant 
-* you can set the start level by changing START_LEVEL_NUM value in source/constants.py
-  * level 1 and 2：day level
-  * level 3: night level
-  * level 4: moving card select level
-  * level 5: wallnut bowling level
+### 프로젝트 정보
+- **오픈소스 이름:** [PythonPlantsVsZombies](https://github.com/marblexu/PythonPlantsVsZombies)
+- **개발자:** Marblexu
+- **사용 언어:** Python
+- **주요 패키지:** Pygame
 
-# Demo
-![demo1](https://raw.githubusercontent.com/marblexu/PythonPlantsVsZombies/master/demo/demo1.jpg)
-![demo2](https://raw.githubusercontent.com/marblexu/PythonPlantsVsZombies/master/demo/demo2.jpg)
+## 프로젝트 목표 및 기대 효과
 
+### 프로젝트의 목적
+- 오픈소스 게임의 기능을 개선하고, 새로운 모드를 추가하여 게임의 완성도를 높이는 것이 목표입니다.
+- 팀원 전체가 오픈소스 프로젝트의 기여자로써 실력을 갖추는 것을 목표로 합니다.
+
+### 기대 효과
+- 다양한 스테이지와 추가적인 디펜스 캐릭터, 난이도 설정을 통해 게임의 재미 요소를 강화했습니다.
+- 프로젝트를 통해 Python 언어에 대한 숙련도가 향상되었으며, 실무 개발에서의 협업 역량을 강화했습니다.
+
+## 추가 기능 및 개선 내용
+
+### 주요 추가 기능
+- **새로운 스테이지 및 난이도 모드:** 게임에 다양한 스테이지와 난이도를 추가하여 유저가 더욱 도전적인 환경에서 게임을 즐길 수 있도록 했습니다.
+- **게임 속도 조절 기능:** 게임 속도가 느리다는 문제를 해결하기 위해 배속 기능을 추가하여 게임 진행 속도를 조절할 수 있도록 했습니다.
+- **UI 개선:** 게임 시작 버튼, 난이도 설정, 소리 설정, 종료 버튼 등 사용자 인터페이스(UI)를 대폭 개선하여 사용자 경험을 향상시켰습니다.
+- **사운드 효과:** 게임 내 사운드 효과를 추가하여 몰입감을 높였습니다.
+
+## 사용된 기술 및 자료 구조
+
+### 기술 스택
+- **프로그래밍 언어:** Python
+- **사용된 라이브러리:** Pygame
+- **디자인 패턴:** Singleton Pattern을 사용하여 게임의 시간과 좀비 수를 관리하는 GameManager 클래스를 구현
+
+### 주요 모듈 및 자료 구조
+- **map.py:** 5x9의 2차원 배열로 게임 맵을 관리합니다.
+- **plant.py 및 zombie.py:** 게임 내 식물과 좀비의 이벤트를 다루는 모듈입니다.
+- **mainmenu.py 및 screen.py:** 메인 메뉴와 게임 결과 화면을 구현하는 모듈입니다.
+
+## 프로젝트 과정
+
+1. **오픈소스 분석:** 오픈소스 코드의 구조와 동작을 분석하고, 팀원들과의 피드백을 통해 개선할 점을 도출했습니다.
+2. **기능 추가:** 분석 내용을 바탕으로 새롭게 필요한 기능을 추가하였고, 기존의 기능을 개선하였습니다.
+3. **UI 개선:** 사용자 경험을 고려하여 다양한 UI 요소를 추가하고, 게임 플레이 흐름을 개선했습니다.
+4. **최종 테스트:** 모든 기능이 정상적으로 동작하는지 최종 테스트를 거쳐 프로젝트를 완성했습니다.
+
+## 프로젝트 평가 및 결론
+
+- 본 프로젝트를 통해 미완성된 오픈소스 게임을 성공적으로 수정하고 보완하였습니다.
+- 팀원들과의 협업을 통해 각자의 역할을 수행하며 소스코드를 개선하는 과정에서 많은 성장을 이루었습니다.
+- Python 언어와 게임 개발에 대한 실력 향상에 크게 기여한 경험이었으며, 이후 게임 개발 시 큰 도움이 될 것입니다.
+
+## 개발 환경
+- **언어:** Python
+- **패키지 관리:** Pygame
+- **버전 관리:** GitHub
